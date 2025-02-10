@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe POS Landing Page</title>
+    <title>Restaurant POS Landing Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
     <style>
         body {
@@ -77,8 +77,8 @@
     <div class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Welcome to Cafe POS</h1>
-            <p>Manage your cafe's operations with ease and efficiency.</p>
+            <h1>Welcome to Restaurant POS</h1>
+            <p>Manage your operations with ease and efficiency.</p>
             <a href="{{ route('login') }}" class="btn btn-primary">Get Started</a>
         </div>
     </div>

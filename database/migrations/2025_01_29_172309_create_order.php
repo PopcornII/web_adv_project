@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('dishes', function (Blueprint $table) {
-            //
-            $table->integer('quantity')->default(0)->after('description');
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->decimal('total_price', 10, 2);
+            $table->string('status')->default('pending');
+            $table->timestamps();
         });
     }
 
@@ -22,9 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('dishes', function (Blueprint $table) {
-            //
-            $table->dropColumn('quantity');
-        });
+        Schema::dropIfExists('order');
     }
 };
