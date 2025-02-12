@@ -33,7 +33,9 @@ class MenuItem extends Model
         ->join('orders', 'orders.id', '=', 'order_items.order_id')
         ->groupBy('menu_items.id', 'menu_items.category')
         ->orderBy('total_sold', 'desc')
-        ->orderBy('menu_items.category', 'asc'); // Sort by category
+        ->orderBy('menu_items.category', 'asc')
+        ->take(3); // Limit to the top 5 most sold items
+      
 
     // If a specific date is passed, filter by date
     if ($date) {

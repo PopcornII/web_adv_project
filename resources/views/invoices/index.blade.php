@@ -76,7 +76,7 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ $invoices->links() }}
+            {{ $invoices->links('pagination::bootstrap-5') }}
         </div>
     </div>
 </div>
@@ -107,4 +107,6 @@
         .catch(error => console.error('Error loading invoice:', error));
 }
 </script>
+
+
 @endsection

@@ -128,7 +128,7 @@
         </div>
 
         <!-- Pagination -->
-        <div class="d-flex justify-content-center">
+        <div>
             {{ $menuItems->appends(['search' => request('search'), 'category' => request('category')])->links('pagination::bootstrap-5') }}
         </div>
     </div>
